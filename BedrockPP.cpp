@@ -62,7 +62,6 @@ int injectMinecraft(HANDLE minecraft) {
 	}
 
 	std::cout << "Injected!";
-	std::this_thread::sleep_for(std::chrono::milliseconds(2000));
 	return 0;
 }
 
@@ -92,5 +91,6 @@ int main(int, char* [])
 	}
 
 	CloseHandle(snapshot);
+	std::this_thread::sleep_for(std::chrono::milliseconds(8000));
 	return 0;
 }
