@@ -72,6 +72,7 @@ int main(int, char* [])
 	std::cout << "Made by DisabledMallis\n" << "Discord: ASM#6173\n" << "Github: https://github.com/DisabledMallis\n";
 	//Tell them the game version & build this made for
 	std::cout << "\nBedrock++ is designed for:\n" << "Minecraft 1.13.105.0_x64\n";
+	std::cout << "Thanks to Danny for helping me learn C++ <3\n";
 
 
 	PROCESSENTRY32 entry;
