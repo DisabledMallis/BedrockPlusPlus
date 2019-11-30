@@ -44,8 +44,10 @@ int injectMinecraft(HANDLE minecraft) {
 	unsigned char nopPatch[8] = { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 };
 
 	//Inejctions here
-	WriteProcessMemory(minecraft, mcBase + 0x188D536, nopPatch, 8, NULL);
-	std::cout << GetLastError();
+	uint64_t injectAddr = (uint64_t)mcBase + 0x188D536;
+	if (WriteProcessMemory(minecraft, (LPVOID)injectAddr, nopPatch, 8, NULL) == 0) {
+		std::cout << GetLastError();
+	}
 
 	std::cout << "Injected!";
 	std::this_thread::sleep_for(std::chrono::milliseconds(2000));
