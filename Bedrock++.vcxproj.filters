@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bedrock++.cpp">
+    <ClCompile Include="BedrockPP.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>
